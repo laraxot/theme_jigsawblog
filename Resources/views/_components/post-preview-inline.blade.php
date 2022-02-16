@@ -4,12 +4,12 @@
     </p>
 
     <h2 class="text-3xl mt-0">
-        <a href="{{ Panel::get($post)->url() }}" title="Read more - {{ $post->title }}"
+        <a href="{{ Panel::make()->get($post)->url() }}" title="Read more - {{ $post->title }}"
             class="text-gray-900 font-extrabold">{{ $post->title }}</a>
     </h2>
 
-    <p class="mb-4 mt-0">{!! Panel::get($post)->getExcerpt(200) !!}</p>
+    <p class="mb-4 mt-0">{!! Panel::make()->get($post)->getExcerpt(200) !!}</p>
 
-    <a href="{{ Panel::get($post)->url() }}" title="Read more - {{ $post->title }}"
+    <a href="{{ Panel::make()->get($post)->url() }}" title="Read more - {{ $post->title }}"
         class="uppercase font-semibold tracking-wide mb-2">Read</a>
 </div>

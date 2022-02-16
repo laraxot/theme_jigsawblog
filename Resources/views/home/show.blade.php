@@ -16,15 +16,15 @@ $posts=Theme::xotModel('article')->get();
             </p>
 
             <h2 class="text-3xl mt-0">
-                <a href="{{ Panel::get($featuredPost)->url() }}" title="Read {{ $featuredPost->title }}"
+                <a href="{{ Panel::make()->get($featuredPost)->url() }}" title="Read {{ $featuredPost->title }}"
                     class="text-gray-900 font-extrabold">
                     {{ $featuredPost->title }}
                 </a>
             </h2>
 
-            <p class="mt-0 mb-4">{!! Panel::get($featuredPost)->getExcerpt() !!}</p>
+            <p class="mt-0 mb-4">{!! Panel::make()->get($featuredPost)->getExcerpt() !!}</p>
 
-            <a href="{{ Panel::get($featuredPost)->url() }}" title="Read - {{ $featuredPost->title }}"
+            <a href="{{ Panel::make()->get($featuredPost)->url() }}" title="Read - {{ $featuredPost->title }}"
                 class="uppercase tracking-wide mb-4">
                 Read
             </a>
