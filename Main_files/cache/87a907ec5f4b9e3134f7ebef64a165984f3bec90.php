@@ -6,20 +6,20 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="description" content="<?php echo e($page->description ?? $page->siteDescription); ?>">
 
-        <meta property="og:title" content="<?php echo e($page->title ? $page->title . ' | ' : ''); ?><?php echo e($page->siteName); ?>"/>
+        <meta property="og:title" content="<?php echo e($page->title ? $page->title.' | ' : ''); ?><?php echo e($page->siteName); ?>"/>
         <meta property="og:type" content="<?php echo e($page->type ?? 'website'); ?>" />
         <meta property="og:url" content="<?php echo e($page->getUrl()); ?>"/>
         <meta property="og:description" content="<?php echo e($page->description ?? $page->siteDescription); ?>" />
 
-        <title><?php echo e($page->title ?  $page->title . ' | ' : ''); ?><?php echo e($page->siteName); ?></title>
+        <title><?php echo e($page->title ? $page->title.' | ' : ''); ?><?php echo e($page->siteName); ?></title>
 
         <link rel="home" href="<?php echo e($page->baseUrl); ?>">
         <link rel="icon" href="/favicon.ico">
         <link href="/blog/feed.atom" type="application/atom+xml" rel="alternate" title="<?php echo e($page->siteName); ?> Atom Feed">
 
-        <?php if($page->production): ?>
+        <?php if ($page->production) { ?>
             <!-- Insert analytics code here -->
-        <?php endif; ?>
+        <?php } ?>
 
         <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
         <link rel="stylesheet" href="<?php echo e(mix('css/main.css', 'assets/build')); ?>">

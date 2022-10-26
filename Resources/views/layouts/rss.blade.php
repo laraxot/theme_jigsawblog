@@ -1,4 +1,5 @@
-<?php echo "<?xml version=\"1.0\"?>\n"; ?>
+<?php declare(strict_types=1);
+echo "<?xml version=\"1.0\"?>\n"; ?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>{{ $page->siteName }}</title>
     <link href="{{ rightTrimPath($page->baseUrl) }}/{{ $page->site_path }}" />

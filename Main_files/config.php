@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use Illuminate\Support\Str;
 
 return [
@@ -28,7 +30,7 @@ return [
 
     // helpers
     'getDate' => function ($page) {
-        return Datetime::createFromFormat('U', $page->date);
+        return DateTime::createFromFormat('U', $page->date);
     },
     'getExcerpt' => function ($page, $length = 255) {
         if ($page->excerpt) {
@@ -54,7 +56,7 @@ return [
         }
 
         return strlen($cleaned) > $length
-            ? preg_replace('/\s+?(\S+)?$/', '', $truncated) . '...'
+            ? preg_replace('/\s+?(\S+)?$/', '', $truncated).'...'
             : $cleaned;
     },
     'isActive' => function ($page, $path) {

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 // @var $container \Illuminate\Container\Container
 // @var $events \TightenCo\Jigsaw\Events\EventBus
 
